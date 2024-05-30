@@ -35,15 +35,13 @@
             //             count++;
             //         }
             //     }
-            //     if (count == 2) {
-            //         console.log(`${a} là số nguyên tố`);
-            //     } else {
-            //         console.log(`${a} không phải là số nguyên tố`);
-            //     }
+            //     let result = count == 2 ? `${a} là số nguyên tố` : `${a} không phải là số nguyên tố`
+            //     console.log(result);
             // }
 
             // a = +(prompt('Nhập 1 số nguyên dương:'));
             // soNT(a);
+
 
 
 
@@ -97,13 +95,13 @@
 
             
 
-
+            // Cách 1:
             // function ktSoLanXuatHien(arr) {
             //     let arr1 = arr.split('');
             //     let count = 1;
-            //     for (let i = 0; i < arr1.length-1; i++) {
+            //     for (let i = 0; i < arr1.length; i++) {
             //         count = 1;
-            //         for (let j = i+1; j < arr1.length; j++) {
+            //         for (let j = i+1; j <= arr1.length - i; j++) {
             //             if (arr1[i] === arr1[j]) {
             //                 count++;
             //                 arr1.splice(j, 1);
@@ -118,4 +116,71 @@
             // ktSoLanXuatHien(text);
 
 
+
+            // Cách 2:
+            // function ktSoLanXuatHien(arr) {
+            //     let arr1 = [...new Set(arr.split(''))];
+            //     let arr2 = arr.split('');
+            //     let count = 0;
+            //     for (let i = 0; i < arr1.length; i++) {
+            //         count = 0;
+            //         for (let j = 0; j < arr2.length; j++) {
+            //             if (arr1[i] === arr2[j]) {
+            //                 count++;
+            //             }
+            //         }
+            //         console.log(`Ký tự ${arr1[i]} xuất hiện ${count} lần`);
+            //     }
+            // }
+
+            // let text = prompt("Nhập vào 1 chuỗi:");
+            // ktSoLanXuatHien(text);
+
+
+
+// Bài 6: Tìm số chỉ xuất hiện 1 lần trong mảng và tìm ra số lớn nhất trong những số đó
+            
+
+
+
+            // function onlyOne(arr, arr1) {
+            //     let count = 0;
+            //     let max = 0;
+            //     for (let i = 0; i < arr.length; i++) {
+            //         count = 0;
+            //         for (let j = 0; j < arr.length; j++) {
+            //             if (arr[i] === arr[j]) {
+            //                 count++;
+            //             }
+            //         }        
+            //         if (count == 1) {
+            //             arr1.push(arr[i])
+            //         }
+            //     }
+            //     for (let i = 0; i < arr1.length; i++) {
+            //         if (arr1[i] > max) {
+            //             max = arr1[i]
+            //         }
+            //     }
+            //     console.log('Số cần tìm là:', max);
+            // }
+
+            // let arr = [8, 8, 7, 6, 5];
+            // let arr1 = [];
+            // onlyOne(arr, arr1)
+
+
+
+// Bài 7: Nhập vào 1 chuỗi và in ra chuỗi với các kí tự không trùng lặp nhau
+
+
+
+            // function justOne(string) {
+            //     let arr = string.split('');
+            //     let arr1 = [... new Set(arr)].join('');
+            //     return arr1
+            // }
+
+            // text = prompt("Nhập vào chuỗi:");
+            // console.log(justOne(text));
 
